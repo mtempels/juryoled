@@ -1,0 +1,42 @@
+{
+  "name": "juryoled",
+  "version": "1.1.0",
+  "description": "juryoled Server",
+  "private": true,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtempels/juryoled.git"
+  },
+  "author": "Matthijs Tempels <matthijs@townsville.nl>",
+  "license": "Copyright Townsville.nl",
+  "preferGlobal": true,
+  "bin": {
+    "juryoled": "index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/mtempels/juryoled/issues"
+  },
+  "homepage": "https://github.com/mtempels/juryoled#readme",
+  "dependencies": {
+    "async": "^2.6.1",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "moment": "^2.23.0",
+    "nconf": "^0.10.0",
+    "townsville-logger": "github:mtempels/townsville-logger",
+    "i2c-bus": "^5.2.2",
+    "oled-font-5x7": "^1.0.3",
+    "oled-i2c-bus": "^1.0.12",
+    "systeminformation": "^5.9.7"
+  },
+  "bundledDependencies": [
+    "townsville-logger",
+    "moment",
+    "nconf",
+    "async"
+  ],
+  "scripts": {
+    "setup": "scripts/setup.sh"
+  }
+}

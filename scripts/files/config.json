@@ -1,0 +1,32 @@
+{
+  "serviceSettings": {
+    "_clientType": "http",
+    "_timeURL":"http://192.168.1.193/timeclock/time",
+    "_scoreURL":"http://192.168.1.193/timeclock/score",
+    "_shotclockURL":"http://192.168.1.185/shotclock/time",
+
+    "clientType": "https",
+    "timeURL": "https://www.townsville.nl/oa/scorebord/time/",
+    "scoreURL": "https://www.townsville.nl/oa/scorebord/score/",
+    "shotclockURL": "https://www.townsville.nl/oa/shotclock/time/",
+    "home": "THUIS",
+    "guest": "GAST",
+    "host": "0.0.0.0",
+    "port": 3000
+  },
+  "logSettings": {
+    "name": "juryoled-server",
+    "showName": true,
+    "level": "debug",
+    "console": {
+      "colorize": true
+    },
+    "file": {
+      "path": "/var/log/juryoled/juryoled-server.log",
+      "rollingFile": {
+        "maxSize": 10000000,
+        "maxFiles": 20
+      }
+    }
+  }
+}

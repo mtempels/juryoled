@@ -1,0 +1,25 @@
+{
+  "serviceSettings": {
+    "clientType": "https",
+    "timeURL": "https://www.townsville.nl/oa/scorebord/time/",
+    "scoreURL": "https://www.townsville.nl/oa/scorebord/score/",
+    "shotclockURL": "https://www.townsville.nl/oa/shotclock/time/",
+    "home": "THUIS",
+    "guest": "GAST"
+  },
+  "logSettings": {
+    "name": "juryoled-server",
+    "showName": true,
+    "level": "debug",
+    "console": {
+      "colorize": true
+    },
+    "file": {
+      "path": "/tmp/juryoled-server.log",
+      "rollingFile": {
+        "maxSize": 10000000,
+        "maxFiles": 20
+      }
+    }
+  }
+}

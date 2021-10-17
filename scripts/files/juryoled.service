@@ -1,0 +1,16 @@
+[Unit]
+Description=Juryoled Server
+
+[Service]
+ExecStart=#NODE_PATH#/juryoled --conf /etc/juryoled/config.json
+# Lift file handle and proc limits
+LimitNOFILE=32768
+LimitNPROC=32768
+Restart=always
+RestartSec=10
+User=www-data
+Group=www-data
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
