@@ -31,14 +31,6 @@ const httpsclient = require('https');
 
 const zeroPad = (num, places) => String(num).padStart(places, '0');
 
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
-
-app.use(bodyParser.json());
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-
 /**
  * Main service class
  */
@@ -156,7 +148,7 @@ class Service {
 
     setInterval(() => {
       this._updateOled();
-    }, 1000);
+    }, 2000);
 
   }
   _updateOled() {
@@ -165,21 +157,13 @@ class Service {
         data.forEach(element => {
           if (element.iface === defaultif) {
             OledText[0] = "IP:" + element.ip4;
-            Oled.setCursor(1, 1);
-            Oled.writeString(font, 1, OledText[0]);
           }
         });
       });
     });
 
-    Oled.setCursor(1, 9);
-    Oled.writeString(font, 1, OledText[1]);
-    Oled.setCursor(1, 18);
-    Oled.writeString(font, 1, OledText[2]);
-    Oled.setCursor(1, 27);
-    Oled.writeString(font, 1, OledText[3]);
-    Oled.setCursor(1, 36);
-    Oled.writeString(font, 1, OledText[4]);
+    Oled.setCursor(1, 1);
+    Oled.writeString(font, 1, OledText[0] + "\n" + OledText[1] + "\n" + OledText[2] + "\n" + OledText[3] + "\n" + OledText[4], true);
   }
 }
 
